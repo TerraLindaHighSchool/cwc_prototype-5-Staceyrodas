@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> targets2;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI winnerText;
     public GameObject titleScreen;
     public Button restartButton;
     public bool isGameActive;
@@ -20,9 +21,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
 
-        
+       
+
     }
 
 
@@ -45,19 +46,61 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
+        if (score >= 20)
+        {
+            winnerText.gameObject.SetActive(true);
+        }
     }
+
+    public void Winner()
+    {
+        winnerText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        isGameActive = false;
+
+    }
+    public void WinnerText()
+    {
+        if (score >= 20)
+        {
+            winnerText.gameObject.SetActive(true);
+        }
+    }
+
 
     public void GameOver()
     {
         restartButton.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;
+        
+
+        // if the winner text is active 
+        {
+            gameOverText.gameObject.SetActive(false);
+        }
+
+        // if the winner text is not active 
+        {
+            gameOverText.gameObject.SetActive(true);
+        }
     }
 
+    
     public void RestartGame()
     {
        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        // if the winner text is active 
+        {
+            gameOverText.gameObject.SetActive(false);
+        }
+
+        // if the winner text is not active 
+        {
+            gameOverText.gameObject.SetActive(true);
+        }
     }
 
     public void StartGame(int difficulty)
