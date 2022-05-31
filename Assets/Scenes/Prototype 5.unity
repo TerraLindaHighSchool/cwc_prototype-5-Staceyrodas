@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets2:
-  - {fileID: 4072532138910793861, guid: f211cfd14bf46744b8b8657b85065f58, type: 3}
-  - {fileID: 4771744357229762949, guid: b2459eb3587ac61478320bc56dc93d71, type: 3}
-  - {fileID: 5238217620060501457, guid: 02ab8fe1ed3449d48aa8375aca3d25c6, type: 3}
-  - {fileID: 4219301088593865221, guid: 289d7aee768e73049b2bc5c11d105ce0, type: 3}
+  - {fileID: 5423049161888773941, guid: 0b8aac98480b1544c99d97e6df5c40dd, type: 3}
+  - {fileID: 7192461708389607213, guid: da778edf5ab44ca4eae0d408cc983c0e, type: 3}
+  - {fileID: 3193682405188320599, guid: d9923f3e8e879304a82d1e11ab39208f, type: 3}
+  - {fileID: 3366573735166996208, guid: abf5f4da8d8f24143bbb601bc802dcc3, type: 3}
   scoreText: {fileID: 2142648406}
   gameOverText: {fileID: 1047412805}
   winnerText: {fileID: 1316519398}

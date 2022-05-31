@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
-        if (score >= 20)
+        if (score >= 200)
         {
-            winnerText.gameObject.SetActive(true);
+            Winner();
         }
     }
 
