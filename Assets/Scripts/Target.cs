@@ -49,10 +49,14 @@ public class Target : MonoBehaviour
     {
         Destroy(gameObject);
 
-        if (!gameObject.CompareTag("Bad"))
+        if (!gameObject.CompareTag("bad"))
         {
-            gameManager.GameOver();
+          
+
+           
         }
+
+        
     }
 
     Vector3 RandomForce()

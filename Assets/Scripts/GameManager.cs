@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
-        if (score >= 200)
+        if (score >= 100)
         {
             Winner();
         }
