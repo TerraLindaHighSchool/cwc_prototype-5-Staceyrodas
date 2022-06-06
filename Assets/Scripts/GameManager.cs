@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
-        if (score >= 100)
+        if (score >= 200)
         {
             Winner();
         }
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     }
     public void WinnerText()
     {
-        if (score >= 20)
+        if (score >= 200)
         {
             winnerText.gameObject.SetActive(true);
         }
@@ -73,6 +73,11 @@ public class GameManager : MonoBehaviour
         restartButton.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;
+
+        //If "Bomb" exits the game then continue game
+        {
+          
+        }
         
 
         // if the winner text is active 
